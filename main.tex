@@ -1,0 +1,362 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{fancyhdr}
+\usepackage[top=0.5in, bottom=0.8in, left=1in, right=1in,includehead,includefoot,heightrounded]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[font={it,color=cap}]{caption}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem,kantlipsum}
+\usepackage{tocloft}
+\usepackage{amsmath}
+\usepackage[framemethod=tikz]{mdframed}
+
+
+\usepackage{times}
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem,amssymb}
+\usepackage{ragged2e}
+\newlist{thematic}{itemize}{8}
+\setlist[thematic]{label=$\square$}
+\usepackage{pifont}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{todonotes}
+\usepackage{comment}
+\usepackage{csquotes}
+\usepackage[skins]{tcolorbox}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Here we are defining the caption settings for the figures 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareCaptionFont{tenpt}{\fontsize{10pt}{11pt}\selectfont #1}
+\captionsetup{font=tenpt}
+
+
+\definecolor{head}{RGB}{172,77,23}
+\definecolor{sub}{RGB}{102,115,67}%{75,115,67}%
+\definecolor{hl}{RGB}{77,128,154}%{14, 102, 127}%{16,120,150}
+\definecolor{cap}{RGB}{60,100,120}
+\definecolor{emp}{RGB}{102,115,67}%{9,49,69}
+\definecolor{CASIIgreen}{RGB}{130,148,86}
+\definecolor{CASIIlightgreen}{RGB}{181,198,137}
+\definecolor{CASIIdarkgreen}{RGB}{75,85,50}
+\definecolor{CASIIorange}{RGB}{194,87,26}
+\definecolor{CASIIlightorange}{RGB}{245,139,76}
+\definecolor{CASIIlightaliceblue}{RGB}{67,171,201}
+\definecolor{CASIIaliceblue}{RGB}{16,120,150}
+\definecolor{CASIIlightindago}{RGB}{60,100,120}
+\definecolor{CASIIdarkindago}{RGB}{9,49,69}
+\definecolor{CASIIdarkyellow}{RGB}{188,161,54}
+\definecolor{CASIIlightyellow}{RGB}{239,212,105}
+\definecolor{CASIIdarkred}{RGB}{154,38,23}
+\definecolor{CASIIlightred}{RGB}{205,89,74}
+\definecolor{CASIIlightgrey}{RGB}{238,238,238}
+\definecolor{CASIIgrey}{RGB}{183,183,183}
+\definecolor{CASIIdarkgrey}{RGB}{67,67,67}
+\definecolor{CASIIbackground}{RGB}{200,211,216}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Here we are defining all the different section types 
+%and their format in the proposal 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%here we set up the underline formats for the subsubsection headinghttps://www.overleaf.com/6521283965mggfqmfhcytv
+\setul{1pt}{.4pt} 
+\setcounter{secnumdepth}{2}
+%here we are defining the section formats.
+\titleformat*{\section}{\Large \color{CASIIaliceblue}}
+\titleformat*{\subsection}{\large \color{head}}
+\titleformat{\subsubsection}[runin]{\large \color{sub}}{\thesubsubsection}{0.5em}{\ul}[:]
+
+
+
+\titleformat{\paragraph}[runin]{\color{head}}{}{1.5em}{\ul}[:]
+\titlespacing*{\section}
+{0pt}{ 2.5ex}{1.2ex}
+\titlespacing*{\subsection}
+{0pt}{1.3ex}{1.2ex}
+
+
+\setlength{\cftbeforesecskip}{5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%next is the main body of the proposal. 
+\fancypagestyle{white_paper}{
+\fancyhf{}% Remove header/footer
+\lhead{\colorbox{CASIIlightindago}{%
+  \makebox[\dimexpr\linewidth-2\fboxsep][l]{\color{white}%
+    Issues and solutions for soft money scientists
+    \hfill
+    \thepage
+  }%
+}}
+\cfoot{}
+\setlength{\headheight}{17pt}
+}
+\title{Soft Money Scientists - The start of a conversation about issues and potential solutions and best practices.}
+
+\begin{document}
+\pagestyle{white_paper}
+%\noindent\textcolor{CASIIdarkindago}{{\bf \Large Helio2050 White Paper }}
+\maketitle
+
+%\vspace{-15pt}
+\noindent A. DeJong, B. Gallardo-Lacourt, R. Robinson, and A. Halford \textcolor{CASIIdarkred}{Add your name here if you want to be a co-author, having discussed these issues with us, editing the document, or providing your support to the project justifies a co-authorship. If you have questions or are unsure, reach out to Anna, Bea, Bob, or Alexa for guidance. }
+
+\pagebreak
+\tableofcontents
+%\vspace{-15pt}
+*Potential appendixes and/or add ons 1) International scientists specific concerns, 2) Goddard specific issues and solutions, 
+\pagebreak
+
+
+\section{ The start of a conversation}
+As the field of heliophysics grows, and the number of permanent positions and funding levels stay constant or rise more slowly, we expect to see an increase in the number of soft money scientists and scientists leaving the field. In 2016, the New York times did a piece showing how in the US we are producing more researchers than there are professorship positions. The Atlantic looked at this issue in 2013 showing that in the physical sciences, less than 10\% of PhDs become professors. Now becoming a professor is not the only career path that a PhD may be necessary to hold, but it is one that many PhD’s aspire to. Thus, for multiple reasons, the number of researchers on soft money continues to increase. We also recognise that most scientists will spend at least a portion of their career on soft money and that the time on soft money is also increasing. Given this, we have identified a need for a set of resources to ensure that people are able to have successful and fulfilling careers.
+
+There are many issues that face soft money scientists who do not necessarily have advocates for them at their institution as they are seen as “temporary”. However, these positions and roles are not always temporary, and can be very successful and fulfilling. In order to gain a better understanding on the current issues and brainstorm potential solutions and mitigation's, a small group of us (B. Gallardo-Lacourt, A. DeJong, R. Robinson, and A. Halford) carried out interviews and conversations with current and past soft money scientists. We have used these conversations to produce this document where we identify some common issues soft money scientists face along with potential solutions. While this survey was not scientifically conducted, we believe it provides some useful insights.
+
+\section{Finding and Defining a Successful Career}
+First point here is that it is important to note that what is a successful or fulfilling career is up to the individual. There is no one size fits all and no one but the individual gets to decide what is their definition of success. Success can mean many different things to different people. For some it may be finding a career that they love which also allows them flexibility with where they work. For others it may be seeing their collection of authored papers increase rapidly. Others may yet define it as something that provides them the financial security to travel or retire. During one’s career your definition of success may change. When one is younger you may strive to be a PI of an explorer mission. As your career evolves you may find that what you are really passionate about is public outreach and science communication and that you no longer really want to be the PI of a large mission. There should be no judgement from others as to your own definition of success. But there should be an acknowledgement of how what one sees as successful will result in the need for different types of professional development and support. 
+
+While a soft money scientist is not beholden to a specific job description, there is also little structural support in navigating and moving to different career paths. One has to be very self motivated at times to find useful and affordable career development opportunities which will enable a person to find their successful career. As we explore these issues and potential solutions we have tried to be generic and career path indifferent. However, we recognize that for a given career path there may be unique issues and one size fit all solutions will not necessarily suffice. As this is intended to be a living document we hope that people will come forward with identification of additional common issues and roadblocks as well as potential solutions and mitigation's.
+
+
+\section{Common Problems and Issues Identified}
+\subsection{Security}
+
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+
+    \item \textcolor{CASIIdarkindago}{Increased stress due to financial insecurity
+        \begin{enumerate}
+            \item Each proposal last ~3 years		
+            \item Need 3 - 5 proposals to cover time
+            \item Need X\% coverage to maintain health and retirement benefits
+            \item Need Coverage to maintain visa status
+        \end{enumerate}}
+    \item \textcolor{CASIIdarkindago}{Can help solve or cause more strains on the 2-body problem}
+
+    
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+
+The most common issue for contractors/soft money scientists is finding consistent funding and enough to cover your time fully, and thus receive benefits (e.g. health, retirement, etc.). This is a constant problem and one that would potentially be difficult to solve. Part of the issue is finding projects and collaborations which include funding for your time. Once these are found, the clock starts ticking for when that funding will run out as most proposal timelines last for about 3 years. 
+
+As part of the funding issue there are pluses and minuses which one has to balance. One can be a soft money scientist “forever”. This can mean constant stress and strain about knowing where the funding is coming from, health benefit coverage, and saving for retirement. 
+
+The flexibility that soft money positions provide can help solve the 2-body problem for people to be able to move freely - however, there is not always an organization willing to let someone either telework or to be a soft money scientist so the 2-body problem can also cause extra problems and strains. This is an issue of particular importance for women in STEM and thus the retention of under represented groups and minorities in STEM. 
+
+Additionally, if the soft money scientist is on an international visa, inconsistent funding can have devastating impacts. Without being able to show full employment, the international soft money scientist (depending on their visa) may face the possibility of having to leave the country. This can cause a brain drain of scientists away from the US where
+
+
+\subsection{Professional credit/recognition}
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+    \item \textcolor{CASIIdarkindago}{Perception inside and outside of institution of lower seniority and authority via Mathew effect}
+    \item \textcolor{CASIIdarkindago}{Not included in strategic planning - thus not considered a valuable member of the group}
+    \item \textcolor{CASIIdarkindago}{Not given increasing responsibilities nor opportunities }
+    \item \textcolor{CASIIdarkindago}{Lack of acknowledgement of credit and career advancement/professional development.}
+
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+Regardless of where one is a soft money scientist, there tends to end up being a two tiered system - the permanent employees and then soft money “temporary” scientists. This can have many follow on impacts. One such impact is how one is treated at the institution. There can be subtle impacts like not being included in strategic planning of the group, or may be much more direct with what responsibilities/opportunities you are allowed to partake in. Often the result is that those with the permanent status are perceived to have more respect and have higher seniority, and authority. 
+
+This two tier system at the institution ends up projecting into the broader research community. This often stems from the Matthew effect where the person with the perceived higher seniority/authority/bigger name, and thus often not the soft money scientist, is assumed to be the PI, or the “real person in charge”. This attitude and assumption can have huge impacts on the career of the soft money scientist. 
+
+By not receiving the correct credit they are not viewed as having the talents and experience necessary to progress in their career - they are viewed within the community to have arrested development, the continual postdoc, never the independent, successful scientists.  This can have real impacts on the ability of the soft money scientist to move into new more permanent positions and perhaps more importantly, feel respected by their peers as a full member of the scientific community. 
+
+\subsection{Career Path}
+       
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+
+    \item \textcolor{CASIIdarkindago}{Lack of access to professional development and mentoring opportunities.}
+    \item \textcolor{CASIIdarkindago}{Lack of knowledge of appropriate salary range for work being done.}
+    \item \textcolor{CASIIdarkindago}{Lack of resources to help transition into different fields/industries.}
+
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+       
+There are a seemingly infinite number of career paths for someone who has received a PhD in heliophysics. One can go into industry, become more applied and work on space weather operations/tool development, become a Professor, go into science communication and outreach, or work at a government agency just to name a few. While those mentioned all stay within Heliophysics, it is unlikely that all those who gain a PhD in heliophysics will stay in this field. There are many examples of some of our top researchers with the most potential leaving to join other research arenas or other job types altogether. This is fine and can be considered a success if the person also defines that as a success. However, we should make sure that there are career development opportunities to help ensure that they are able to succeed in whatever path they decide to take. We will talk more about this in the mitigation/solution section. 
+
+An important issue that many soft money scientists face is knowing what their salary should be, knowing who to negotiate with, and what would be perceived to be too much or too little. With a more permanent job, one can often find out what the pay scale and range is and negotiate accordingly. A soft money scientist doesn’t always have this luxury - but may also not be confined to any scale and can increase their pay rate beyond that of a permanent position (but with a higher salary often more proposals are needed to cover in order to make sure to not loose other benefits). 
+
+\subsection{Compounding Issues}
+
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+
+    \item \textcolor{CASIIdarkindago}{Without structural and institutional support it can be difficult for soft money scientists to form researcher groups}
+    \item \textcolor{CASIIdarkindago}{It is important to ensuring appropriate credit is given both inside and outside of the institution for leadership positions taken on by soft money scientists}
+
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+
+When looking at the combined issues of funding, career path and receiving credit, an issue that arises is being able to form or lead your own research group. Perhaps it is best to identify first how to form a research group. Ideally the group will have consistent personnel and thus funding to the personnel. Often this is in part achieved by having multiple people paid through other means than grants, e.g. 9 months salary paid via professorship, students/postdocs paid via fellowships, internal funding from institution. While permanent employees will often have access to this funding, soft money scientists rarely do. Thus it is beneficial to have a permanent employee as part of the group. 
+
+This leads into the next issue. By virtue of the community giving more authority/seniority to those with permanent positions, they will receive the credit for leading this group. While most of us do not go into science for the credit, this lack of acknowledgement affects the ability of soft money scientists to show career progression, leadership, and ability to not just perform independent research, but also as a leader of a group. The lack of acknowledgement of these skills can lead to difficulty in receiving large grants where one’s leadership abilities are required and leadership/senior positions within the scientific community.   
+
+\section{Solutions and Mitigations to Common Problems and Issues}
+
+\subsection{Security:}
+
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+    \item \textcolor{CASIIdarkindago}{Open communication about funding levels is necessary to ensure people are comfortable with these discussions and able to maintain stability. }
+    \item \textcolor{CASIIdarkindago}{Creative solutions to enable these conversations can reap many benefits.}
+    \item \textcolor{CASIIdarkindago}{Providing a structure for successful soft money scientists can benefit both the scientists and the institutions they are at.}
+
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+
+This is perhaps the hardest of issues to tackle. Depending on the institution, there may be multiple different ways to try to tackle this. If the institution is quite large, there may be an opportunity to increase stability through increased collaboration. This could be done through the creation of a FUNDList/Craigslist type group. Most people with funding will experience periods of great luck and periods of less luck. By creating a system where people can help share the wealth, the entire team is able to benefit and see more consistent funding, more security and thus increased collaboration. 
+
+We have created a website prototype for people to advertise funding availability, people searching for funding, and people volunteering for invited lectures on different topics:\\
+https://beatrizgallardo.wixsite.com/fundlist
+
+It should be noted that we see a need for this to be done as a “fundlist” instead of through networking and asking around. Many institutions may currently rely on individuals to voice and seek out funding themselves. This can and has worked. However, having a list available for people to see who may already have funding available, what skills sets may be required, and what the expected timeline for completion is we are able to address many potential issues. The first is the awkwardness of having to discuss and bring up the topic of money with someone whom you may not know well and is in a position of power over you. You are also able to identify if you have the required skill sets and time available to complete the necessary task. Beyond the benefits to the soft money scientist, this can also help permanent researchers ensure that the work is completed, identify people with the necessary skills and thus growing new collaborations. 
+
+With the increase of couples in STEM having a two body problem, having a healthy environment for soft money scientists can be a huge advantage for attracting and retaining talented employees. While dual career hires are increasing, it can still be difficult to open up a new spot for an additional hire. For decades this has been an issue. And while for some institutions it may never be feasible to provide a permanent position for both parties, making sure each has the support and opportunities to have their successful career can lead to an increase in retention. 
+
+
+\subsection{Professional credit/recognition}
+
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+    \item \textcolor{CASIIdarkindago}{ Active work is needed for those with the perceived seniority and higher authority to ensure credit is given correctly.  }
+    \item \textcolor{CASIIdarkindago}{ Where possible, nominate people for awards and honours}
+
+
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+The issue of making sure credit and recognition is given to the right people is a cultural issue and will thus take time. However, we can start ensuring that this occurs through some clear steps. If you are a senior scientist or someone who often benefits from the Matthew effect, take it upon yourself to speak up and correct people when they give you credit that really should go to someone else. If you are comfortable, be a good aly and make sure to point out when credit is not givin to the correct person. 
+
+Another method of ensuring that soft money scientists get recognition is making sure that they are put up for awards and honours. While this may not be as useful as winning a grant, what it does do is help show career progression, acknowledgement from the community of their contributions, and potential to a prospective employer. Within industry one shows advancement through promotions. As this is not necessarily achievable through a research career, having clear recognizable and official achievements helps others translate accomplishments into their own fields. 
+
+
+\subsection{Career Paths}
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+    \item \textcolor{CASIIdarkindago}{Clear steps and changes in job titles.  }
+    \item \textcolor{CASIIdarkindago}{Mentoring and clear supervisory structures should be available to all employees}
+    \item \textcolor{CASIIdarkindago}{Equal access to professional development opportunities}
+
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+One important and clear method of showing advancement is to show a change in your job title. For example, going from Associate to Full professor is a clear step within academia. The same should be true for soft money employees. Establishing a clear set of accomplishments for promotion from postdoc to researcher to senior researcher etc. This not only shows the soft money scientist that their institution recognizes their continued development, but also potential employers.  
+
+Mentoring is incredibly important no matter what stage of your career you are at. Many institutions are starting to realize this and provide these opportunities to their permanent staff. Some institutions also will allow soft money scientists to participate, but only if there is room, and only if they know about it - and these resources are not always equally advertised to the permanent and soft money staff. 
+
+It is important that there is a clear supervisor who is able to provide performance reviews as this is a clear time when mentoring can occur. Along with this, there needs to be an identification and declaration of what career path the soft money scientist would like to take as this will affect what advice may be given. It is easy for any one to assume that of course all people will have the same definition of success and goals for their career that they themselves have. However, this is unlikely the case and being able to get good honest and actionable advice will enable the soft money scientist and their employers to ensure that they can gain access to the opportunities and training to help them succeed. 
+
+Along with mentoring, access to professional development activities is incredibly important. Many institutions recognize the importance of continued learning and development. This enables employees to stay current, learn new skills, and learn skills that will help them progress into different roles throughout their career. As many soft money scientists are looking to move into a new position, these activities are just as if not even more important. Making sure that soft money scientists have access to professional development activities benefits not just them, but their institution. If they stay at the institution, you now have a more skilled workforce. If they leave, they will have hopefully had a good experience and will continue to grow collaborations and suggest that others consider working at your institution.  
+
+\subsection{Compounding Issues}
+\begin{tcolorbox}[enhanced,width=\textwidth,center upper,
+    fontupper=\bfseries,sharp corners, colback=CASIIlightgrey, colframe=CASIIdarkgreen]
+\textcolor{CASIIorange}{Quick take aways:}
+%\vspace{-5pt}
+\begin{enumerate}
+    \item \textcolor{CASIIdarkindago}{}
+    \item \textcolor{CASIIdarkindago}{}
+    \item \textcolor{CASIIdarkindago}{}
+
+%    \begin{displayquote}
+%\emph{Science is much more than a body of knowledge. It is a way of thinking. This is central to its success...  Our task is not just to train more scientists but also to deepen public understanding of science.} -- Carl Sagan
+%\end{displayquote}
+\end{enumerate}
+\end{tcolorbox}
+
+
+\section{Potential Career paths}
+ While there are about as many career paths as there are scientists, they can be loosely grouped into some common categories which we will outline below. However, as the times change, new pathways may become more common and others fall out of favour. Thus these pathways should be seen more as providing a language structure to help describe what career pathway you would like to take, or that you think someone may be interested in. Each has their own set of potential issues and benefits as well as career specific professional development needs. 
+
+\subsection{Applied Scientist}
+
+\subsection{Operational Researcher/Forecaster}
+
+\subsection{Research Scientist/Research Professor}
+
+\subsection{Professor }
+Three primary things - service, teaching research. Depending on the university/college they each end up taking up different proportions of time. 
+
+\subsubsection{What does Service at a university look like }
+
+\subsubsection{What does Teaching look like (flipped classrooms, chalk talks, how do you stay up to date on pedagogy.)} 
+
+\subsubsection{What does Research look like. }
+
+\subsection{Government Scientists}
+Service and research 
+
+\subsection{Industry Scientist}
+Service to the user/customer. 
+
+
+\section{Acknowledgements}
+We would like to thank all of those who have been involved, our co-authors, and those whom provided invaluable discussions and insights including... \textcolor{CASIIdarkred}{Add your name here if you want an acknowledgement}
+
+\end{document}
